@@ -1,0 +1,14 @@
+.questions-page {
+  font-size: 18px;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__loading {
+    background-color: rgb(49, 56, 91);
+    color: white;
+    font-size: 30px;
+  }
+}

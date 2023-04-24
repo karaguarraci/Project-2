@@ -1,0 +1,17 @@
+.page {
+  margin: 10px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/5726/5726470.png");
+  color: rgb(73, 105, 211);
+  height: 100vh;
+}
+
+h1 {
+  background-color: rgb(49, 56, 91);
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 40px;
+}

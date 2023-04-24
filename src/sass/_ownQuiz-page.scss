@@ -1,0 +1,13 @@
+.added-questions {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__button {
+    padding: 5px;
+    width: 15vw;
+    margin-bottom: 20px;
+  }
+}
