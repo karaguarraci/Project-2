@@ -4,6 +4,8 @@ This project involved building a front-end React app that interacts with a publi
 
 Check out the [Ultimate Trivia Quiz](https://ultimate-trivia-quiz.netlify.app/)
 
+<img src="https://github.com/karaguarraci/Project-2/assets/115991254/1afd4af2-150f-4360-b27b-93817c11c274" width="350">
+
 ## Tech Stack
 
 - HTML
