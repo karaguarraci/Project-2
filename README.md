@@ -208,6 +208,7 @@ const [showAnswer, setShowAnswer] = useState(false);
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/44a52a57-3649-4b2d-b58a-93c3d4536fe3" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/b759e57d-22f9-427e-a592-4bcfc97bf48a" alt="app screenshot" width="300" height="200">
 </p>
+
 ## Key Learnings
 
 Creating my first React app was a valuable learning experience for me. I gained a deeper understanding of key concepts such as conditional rendering and state management. Additionally, this project provided me with a practical opportunity to explore and work with API endpoints in the front end. I learned how to make HTTP requests to APIs, retrieve data, and handle it in my React components.
