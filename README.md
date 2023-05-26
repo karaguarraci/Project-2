@@ -201,13 +201,13 @@ const [showAnswer, setShowAnswer] = useState(false);
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/202027fb-b991-4cc0-9548-8cd035ea15e9" alt="app screenshot" width="300">
 
 ## Project Screenshots
-
+<p align="center">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/6aaca053-69f2-4aa6-b2c1-915ee483060a" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/8f25f4a1-15d9-4fe2-a8ad-307506909c69" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/d34facbb-578d-4c5e-a0de-5d15a60a8da6" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/44a52a57-3649-4b2d-b58a-93c3d4536fe3" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/b759e57d-22f9-427e-a592-4bcfc97bf48a" alt="app screenshot" width="300" height="200">
-
+</p>
 ## Key Learnings
 
 Creating my first React app was a valuable learning experience for me. I gained a deeper understanding of key concepts such as conditional rendering and state management. Additionally, this project provided me with a practical opportunity to explore and work with API endpoints in the front end. I learned how to make HTTP requests to APIs, retrieve data, and handle it in my React components.
