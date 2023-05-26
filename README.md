@@ -118,6 +118,88 @@ const OwnQuizPage = () => {
 
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/e4d68ce4-4825-4312-9b1b-ebcd96409680" alt="app screenshot" width="350">
 
+## Challenges
+
+I mentioned above about the challenge I had when implementing the category selection.
+To ensure that the appropriate set of questions was displayed upon selection of a particular category, I implemented the useParams method. Before that, I had to include the categories themselves by creating an object that contained the displayName and slug for each category. The slug was then utilised to link to the corresponding set of questions. The implementation of useParams looked something like this:
+
+```js 
+ const { category } = useParams();
+  useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      if (category === undefined) {
+        const { data } = await axios.get(`${X_API_URL}/trivia?limit=15`, {
+          headers: { "X-Api-Key": APIkey },
+        });
+        setQuestions(data);
+        setLoading(false);
+        // console.log(data);
+      } else {
+        const { data } = await axios.get(
+          `${X_API_URL}/trivia?limit=15&category=${category}`,
+          {
+            headers: { "X-Api-Key": APIkey },
+          }
+        );
+        setQuestions(data);
+        setLoading(false);
+        // console.log(data);
+      }
+    };
+    fetchData();
+  }, [category]);
+```
+
+I also made use of an if statement that checked whether the category slug was undefined. This was necessary because the random questions functionality would break if the slug was defined. By doing so, I was able to ensure that the random questions feature would only be used when a category was not selected, while also allowing for the selection of a specific category when needed.
+
+I have since thought about refactoring the above code, as it is quite repetitive, below is the refactored code: 
+
+```js
+const { category } = useParams();
+  const getUrlString = () => {
+    let myUrl = `${X_API_URL}/trivia?limit=15`;
+    if (category !== undefined) {
+      myUrl += `&category=${category}`;
+    }
+    return myUrl;
+  };
+  useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      const { data } = await axios.get(getUrlString(), {
+        headers: { "X-Api-Key": APIkey },
+      });
+      setQuestions(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, [category]);
+```
+<img src="https://github.com/karaguarraci/Project-2/assets/115991254/8f25f4a1-15d9-4fe2-a8ad-307506909c69" alt="app screenshot" width="300">
+
+## Wins
+
+To make the answer hidden and reveal it upon button click, I utilised the useState() hook and created a function to reveal the answer. Using a ternary operator in the return statement, I only displayed the answer if the button had been clicked and the showAnswer state was true. This was achieved by calling the reveal answer function on the onClick event of the button.
+
+```js
+const [showAnswer, setShowAnswer] = useState(false);
+
+
+  const revealAnswer = () => {
+    setAnswer(question.answer);
+    setShowAnswer(true);
+  };
+  
+  
+ <p>{showAnswer ? `A. ${answer}` : ""}</p>
+        <button onClick={revealAnswer} className="question-card__button">
+          Reveal Answer
+        </button>
+```
+<img src="https://github.com/karaguarraci/Project-2/assets/115991254/dbd73373-26a5-4797-b433-ca8059700e01" alt="app screenshot" width="300">
+<img src="https://github.com/karaguarraci/Project-2/assets/115991254/202027fb-b991-4cc0-9548-8cd035ea15e9" alt="app screenshot" width="300">
+
 ## Project Screenshots
 
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/6aaca053-69f2-4aa6-b2c1-915ee483060a" alt="app screenshot" width="300" height="200">
@@ -125,3 +207,11 @@ const OwnQuizPage = () => {
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/d34facbb-578d-4c5e-a0de-5d15a60a8da6" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/44a52a57-3649-4b2d-b58a-93c3d4536fe3" alt="app screenshot" width="300" height="200">
 <img src="https://github.com/karaguarraci/Project-2/assets/115991254/b759e57d-22f9-427e-a592-4bcfc97bf48a" alt="app screenshot" width="300" height="200">
+
+## Key Learnings
+
+Creating my first React app was a valuable learning experience for me. I gained a deeper understanding of key concepts such as conditional rendering and state management. Additionally, this project provided me with a practical opportunity to explore and work with API endpoints in the front end. I learned how to make HTTP requests to APIs, retrieve data, and handle it in my React components.
+
+## Future Improvements
+
+I would like to add two features to the ‘myQuiz’ element of my project to improve the user experience: the ability to reset the page and delete individual questions. These features were not implemented due to time constraints, but I believe they would be valuable additions. 
