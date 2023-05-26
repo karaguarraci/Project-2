@@ -2,7 +2,7 @@
 
 This project involved building a front-end React app that interacts with a publicly available API and incorporates multiple components. For my project, I used a trivia API and the app is designed to provide users with a quiz featuring a diverse range of categories and questions. Users can either opt for a random quiz that combines questions from different categories or personalise their quiz by selecting questions to add to their "My Quiz" page.
 
-Check out the [Ultimate Trivia Quiz](ultimate-trivia-quiz.netlify.app)
+Check out the [Ultimate Trivia Quiz](https://ultimate-trivia-quiz.netlify.app/)
 
 ## Tech Stack
 
