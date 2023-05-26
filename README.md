@@ -176,7 +176,7 @@ const { category } = useParams();
     fetchData();
   }, [category]);
 ```
-<img src="https://github.com/karaguarraci/Project-2/assets/115991254/8f25f4a1-15d9-4fe2-a8ad-307506909c69" alt="app screenshot" width="300">
+<img src="https://github.com/karaguarraci/Project-2/assets/115991254/8f25f4a1-15d9-4fe2-a8ad-307506909c69" alt="app screenshot" width="350">
 
 ## Wins
 
