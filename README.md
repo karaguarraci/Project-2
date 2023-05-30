@@ -12,7 +12,7 @@ Check out the [Ultimate Trivia Quiz](https://ultimate-trivia-quiz.netlify.app/)
 - CSS
 - JavaScript
 - React
-- SASS
+- Sass
 
 ## Project Brief
 
