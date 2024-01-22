@@ -10,7 +10,7 @@ const QuestionCard = ({ question, showAddButton = true }) => {
     setAnswer(question.answer);
     setShowAnswer(true);
   };
-  // move savedQuestions to const
+  
   const handleAddQuestion = () => {
     const savedQuestions =
       JSON.parse(localStorage.getItem("savedQuestions")) || [];
@@ -27,12 +27,7 @@ const QuestionCard = ({ question, showAddButton = true }) => {
     localStorage.setItem("savedQuestions", JSON.stringify(savedQuestions));
   };
 
-  //add a showDeletebutton and set it accordingly (showAddButton example)
-
-  //showDeleteButton onClick event to call a function that takes the question
-  //remove the passed question from the savedQuestions list. savedQuestions
-  //list is the list used to populate the My Quiz page.
-  //once removed and the list has been updated, redraw the page (probably useState or useEffect)
+ 
 
   return (
     <li className="question-card">
