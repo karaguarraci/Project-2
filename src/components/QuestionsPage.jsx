@@ -5,7 +5,7 @@ import { APIkey } from "../../const";
 import QuestionCard from "./QuestionCard";
 import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-// import { categoryURL, randomURL } from "../../const";
+
 
 const QuestionsPage = (props) => {
   console.log(props);
@@ -59,39 +59,4 @@ const QuestionsPage = (props) => {
 
 export default QuestionsPage;
 
-// before costa:
-//
-// if (category === undefined) {
-//   const { data } = await axios.get(`${X_API_URL}/trivia?limit=15`, {
-//     headers: { "X-Api-Key": APIkey },
-//   });
-//   setQuestions(data);
-//   setLoading(false);
-//   // console.log(data);
-// } else {
-//   const { data } = await axios.get(
-//     `${X_API_URL}/trivia?limit=15&category=${category}`,
-//     {
-//       headers: { "X-Api-Key": APIkey },
-//     }
-//   );
-//   setQuestions(data);
-//   setLoading(false);
-//   // console.log(data);
-// }
 
-// useEffect(() => {
-//   setLoading(true);
-//   const fetchData = async () => {
-//     const { data } = await axios.get(
-//       category === undefined ? randomURL : categoryURL,
-//       {
-//         headers: { "X-Api-Key": APIkey },
-//       }
-//     );
-//     setQuestions(data);
-//     setLoading(false);
-//     // console.log(data);
-//   };
-//   fetchData();
-// }, [category]);
